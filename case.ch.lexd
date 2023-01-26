@@ -1,6 +1,13 @@
-# окончания из Jakovlev-1960-Morfologiya%20chechenskogo%20yazyka, самоучителя и Nichols-1994-Chechen_ILC.pdf
-# названия падежей (кроме абсолютива, он мой) из Nichols-1994-Chechen_ILC.pdf
-# как потом добавить глоссу ч.р. перед падежом (<num>, <noun>, <adj>)? прописать в основном лексиконе?
+PATTERNS # Тут нужно будет добавить предшествующие части речи
+Case                           # singular
+Plural[Pl_j] Case[Pl_j]        # plural 
+Plural[Pl_sh] Case[Pl_sh]      # plural 
+Plural[Pl_shk] Case[Pl_shk]    # plural 
+
+Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
+Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
+
+#---------------------------------------------------------------------------------------------------------------
 
 LEXICON Case # Cases with "+sh" in plural
 <abs>:[Pl_sh, Pl_j]           # По Яковлеву он может быть и ш, и й, добавляю в обе группы
@@ -47,19 +54,7 @@ LEXICON Plural
 <pl>:й[CVadjust, Pl_j]       # Yakovlev (+йил в типе В на стр. 26??? - можно прописать отдельно)
 
 
-PATTERNS # Это наверное будет потом в другом месте
-Case                           # singular
-Plural[Pl_j] Case[Pl_j]        # plural 
-Plural[Pl_sh] Case[Pl_sh]      # plural 
-Plural[Pl_shk] Case[Pl_shk]    # plural 
-
-Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
-Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
-# Тут перед падежом должно что-то идти...
-
 # [CVadjust] скорее всего потом уберу, нужно только понять, что сделать в twol.
-
-# Про склонения самучитель стр. 39
 
 # ВОПРОС:
 # Производные падежи от вещественного (locative) и сравнительного (comparative)
