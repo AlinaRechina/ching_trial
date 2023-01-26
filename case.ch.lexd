@@ -2,56 +2,65 @@
 # названия падежей (кроме абсолютива, он мой) из Nichols-1994-Chechen_ILC.pdf
 # как потом добавить глоссу ч.р. перед падежом (<num>, <noun>, <adj>)? прописать в основном лексиконе?
 
-LEXICON CaseSg
-<abs>:
+LEXICON Case # Cases with "+sh" in plural
+<abs>:[Pl_sh, Pl_j]           # По Яковлеву он может быть и ш, и й, добавляю в обе группы
 
-<obl><erg>:а          # самоучитель + Nichols + Jakovlev
-<obl><erg>:ас         # Jakovlev (а = наращение?)
-<obl><erg>:с          # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)
-<obl><erg>:о          # самоучитель + Nichols + Jakovlev ("уо", записывается как о - стр. 20)
-<obl><erg>:ие         # Nichols (моё предположение: записывается как e?) стр. 31: only on -ie stems
-<obl><erg>:ма[num]    # у числительных, меняет предыдущее undelying н на м (Jakovlev)
+<obl><erg>:а[Pl_sh]           # самоучитель + Nichols + Jakovlev
+<obl><erg>:с[CVadjust]        # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)
+<obl><erg>:о                  # самоучитель + Nichols + Jakovlev ("уо", записывается как о - стр. 20)
+<obl><erg>:ие                 # Nichols (моё предположение: записывается как e?) стр. 31: only on -ie stems
+<obl><erg>:ма[num]            # у числительных, меняет предыдущее undelying н на м (Jakovlev)
 
-<obl><gen>:ан # самоучитель + Nichols + Jakovlev
-<obl><gen>:ен # самоучитель
-<obl><gen>:ин # самоучитель
-<obl><gen>:ун # самоучитель
-<obl><gen>:н  # Nichols + Jakovlev
+<obl><gen>:н[CVadjust, Pl_j]  # самоучитель + Nichols + Jakovlev
+# в самоучителе есть ещё ен, он, ун, но это, я думаю, гласный основы + "н"
 
-<obl><dat>:на  # самоучитель + Nichols + Jakovlev
-<obl><dat>:ана # самоучитель + Nichols (только в примерах) + Jakovlev
+# Dative
+<obl><dat>:на[CVadjust, Pl_sh]  # самоучитель + Nichols + Jakovlev
 
-<obl><ins>:ца  # самоучитель + Nichols
-<obl><ins>:аца # самоучитель (скорее всего наращение основы)
+# Instrumentalis
+<obl><ins>:ца[CVadjust, Pl_sh]  # самоучитель + Nichols + Jacovlev
+
 
 # вещественный = locative
-<obl><loc>:х    # самоучитель + Nichols + Jakovlev 
-<obl><loc>:ах   # Jakovlev
-<obl><loc>:ха   # Jakovlev - производная форма
-<obl><loc>:аха  # Jakovlev - производная форма
+<obl><loc>:х[CVadjust, Pl_j]    # самоучитель + Nichols + Jakovlev 
+<obl><loc>:ха[CVadjust, Pl_j]   # Jakovlev - производная форма
 
 # местный = allative
-<obl><all>:га[all_der]   # самоучитель + Nichols + Jakovlev (только 4 склонение - стр. 23)
-<obl><all>:е[all_der]    # самоучитель + Nichols (ie) + Jakovlev ([иэ])
-<obl><all>:а[all_der]    # самоучитель
+<obl><all>:га[all_der]              # самоучитель + Nichols + Jakovlev (только гл. - тип Б стр. 26) (только 4 склонение - стр. 23)
+<obl><all>:е[all_der]               # самоучитель + Nichols (ie) + Jakovlev ([иэ])
+<obl><all>:а[all_der, Pl_shk]       # самоучитель + Jacovlev (архаичное, используется для производных падежей только во мн.ч.)
 
 # сравнительный = comparative
-<obl><comp>:л    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
-<obl><comp>:ла   # самоучитель + Jakovlev (по нему - производная форма)
-<obl><comp>:лла  # самоучитель + Jakovlev (по нему - производная форма)
-
-PATTERN DerivatedCases # Это наверное будет потом в другом месте
-CaseSg
-CaseSg[all_der] (AllDer | AllDer[der1] AllDer[der2])?
+<obl><comp>:л[CVadjust]    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
+<obl><comp>:ла[CVadjust]   # самоучитель + Jakovlev (по нему - производная форма)
+<obl><comp>:лла[CVadjust]  # самоучитель + Jakovlev (по нему - производная форма)
 
 LEXICON AllDer # Nichols (названия) + Jakovlev (окончания)
 <location>:хь
 <direction>:хьа[der1]
-<source>:ра[der2]
+<source>:ра[CVadjust, der2]        
 <across>:хула[der2]
 
+LEXICON Plural
+<pl>:ш[CVadjust, Pl_sh]      # Yakovlev
+<pl>:шк[CVadjust, Pl_shk]    # Yakovlev
+<pl>:й[CVadjust, Pl_j]       # Yakovlev (+йил в типе В на стр. 26??? - можно прописать отдельно)
+
+
+PATTERNS # Это наверное будет потом в другом месте
+Case                           # singular
+Plural[Pl_j] Case[Pl_j]        # plural 
+Plural[Pl_sh] Case[Pl_sh]      # plural 
+Plural[Pl_shk] Case[Pl_shk]    # plural 
+
+Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
+Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
+# Тут перед падежом должно что-то идти...
+
+# [CVadjust] скорее всего потом уберу, нужно только понять, что сделать в twol.
 
 # Про склонения самучитель стр. 39
+
 # ВОПРОС:
 # Производные падежи от вещественного (locative) и сравнительного (comparative)
 # как будто ничего не значат отдельного. Оставить их как просто соответствующие падежи?
