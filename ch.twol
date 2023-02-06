@@ -14,7 +14,6 @@ Rules
 %>:0 <=> _ ;
 
 "vowel epenthesis before case markers"
-%{obl%}:а <=> consonants_;
-%{obl%}:а /<= consonants_й:й;
-%{obl%}:и <=> consonants_й:й;
-%{obl%}:0 <=> vowels_;
+%{obl%}:а <=> consonants _ ;
+%{obl%}:и <=> consonants _ й:й;
+%{obl%}:0 <=> vowels _ ;
