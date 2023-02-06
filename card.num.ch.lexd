@@ -69,60 +69,6 @@ NounClass NumNomOblAgr NumInflLocPl NumInflLat
 NounClass NumNomOblAgr NumInflLocPl NumInflLat NumInflTrans
 NounClass NumNomOblAgr NumInflLocPl NumInflLat NumInflElat
 
-LEXICON NumAttInfl
-<num><att>:
-
-LEXICON NumAbsInfl
-<num><abs>:
-
-LEXICON NumInfl
-<num><obl><erg>:мма  
-<num><obl><gen>:ннан
-<num><obl><dat>:нна
-<num><obl><ins>:нца
-
-LEXICON NumInflLoc
-<num><obl><loc>:нга #местный (allative?)
-
-LEXICON NumInflEss
-<ess>:хь #эссив (на месте) (locative?)
-LEXICON NumInflLat
-<lat>:хьа #латив (в X) (locative?)
-LEXICON NumInflElat
-<elat>ра #элатив (из Х) (ablative) (в Ингушском может добавляться к  allative, locative, or other oblique forms)
-LEXICON NumInflTrans
-<trans>:хула #транслатив (через Х)
-
-LEXICON NumInflComp
-<num><obl><comp>:ннал #сравнительный
-LEXICON NumInflCompDer
-<cder>:ла #сравнительный производный
-
-LEXICON NumInflMat
-<num><obl><mat>:ннах #вещественный (lative?)
-LEXICON NumInflMatDer
-<mder>:а #вещественный производный
-
-# МНОЖЕСТВЕННОЕ ЧИСЛО
-
-LEXICON NumAbsInflPl
-<num><pl><abs>:ннаш
-
-LEXICON NumInflPl
-<num><obl><pl><erg>:ннаша 
-<num><obl><pl><gen>:ннийн
-<num><obl><pl><dat>:ннашна
-<num><obl><pl><ins>:ннашка
-
-LEXICON NumInflLocPl
-<num><obl><pl><loc>:нга #местный (allative?)
-
-LEXICON NumInflCompPl
-<num><obl><pl><comp>:ннийл #сравнительный
-
-LEXICON NumInflMatPl
-<num><obl><pl><mat>:ннийх #вещественный (lative?)
-
 # РОД
 
 LEXICON NounClass
@@ -131,12 +77,10 @@ LEXICON NounClass
 <cl3>:в #м+ед	
 <cl4>:д #мн
 
-
 # СПРАВКА
 # Несамостоятельные (att) вообще не склоняются, просто стоят в oblique
-# Самостоятельные (nom) склоняются все Aliroev_I_Yu__Margoshvili_L_Yu_-_Kistiny стр. 97 (но это не точно)
-# Не очень понятны названия всех местных падежей
-
+# Самостоятельные (nom) склоняются все по Aliroev_I_Yu__Margoshvili_L_Yu_-_Kistiny стр. 97 (но я слабо себе это представляю)
+# Или только первые пять (Yakovlev стр. 61)
 
 LEXICON NumAttAbs
 цaI:цхьа #1
@@ -157,10 +101,8 @@ LEXICON NumAttAbs
 берхІитта:берхІитта
 ткъайоьсна:ткъайоьсна  
 ткъа:ткъа #20
-
-LEXICON NumAttAbsAgr
-иъ:иъ #4
-ейтта:ейтта #14
+иъ:иъ[Arg] #4
+ейтта:ейтта[Agr] #14
 
 LEXICON NumAttObl
 цaI:цхьана #1
@@ -181,10 +123,8 @@ LEXICON NumAttObl
 берхІитта:берхІитта
 ткъайоьсна:ткъайоьсна 
 ткъа:ткъа #20
-
-LEXICON NumAttOblAgr
-иъ:еа #4
-ейтта:ейтта #14
+иъ:еа[Agr] #4
+ейтта:ейтта[Agr] #14
 
 LEXICON NumNomAbs
 цaI 
@@ -205,18 +145,16 @@ LEXICON NumNomAbs
 берхІитта
 ткъайоьсна
 ткъа #20
-
-LEXICON NumNomAbsAgr
-ейтта #14
-иъ #4
+ейтта[Agr] #14
+иъ[Agr] #4
 
 LEXICON NumNomObl
 цaI:цхьа #1
-шиъ:ши #2
-кхоъ:кхаа #3
-пхиъ:пхеа #5
-ялх:ялх #6
-ворхІ:ворхІ #7
+шиъ:ши
+кхоъ:кха #3 
+пхиъ:пхе #5
+ялх:ялх 
+ворхІ:ворхІ 
 бархІ:бархІ
 исс:исс
 итт:итт #10
@@ -227,9 +165,7 @@ LEXICON NumNomObl
 ялхитта:ялхитта
 вуьрхІитта:вуьрхІитта
 берхІитта:берхІитта
-ткъайоьсна:ткъайоьсна #19
+ткъайоьсна:ткъайоьсна 
 ткъа:ткъа #20
-
-LEXICON NumNomOblAgr
-иъ:еа #4
-ейтта:ейтта #14
+иъ:еа[Agr] #4
+ейтта:ейтта[Agr] #14
