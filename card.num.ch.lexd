@@ -1,73 +1,24 @@
 # видимо, числительные пренадлежат к 4 склонению
 
 PATTERNS
-NumAttAbs NumAttInfl #не склоняются
-NumAttObl NumAttInfl #не склоняются
-NounClass NumAttAbsAgr NumAttInfl #не склоняются + согласование
-NounClass NumAttOblAgr NumAttInfl #не склоняются + согласование
+(NumAttAbs[-Agr] | NumAttObl[-Agr]) NumAttInfl #no inflection
+NounClass (NumAttAbsAgr[Agr] | NumAttOblAgr[Agr]) NumAttInfl #agreement + no inflection
 
-NumNomAbs NumAbsInfl              #абсолютив
-NumNomObl NumInfl                 #склонение
-NumNomObl NumInflComp
-NumNomObl NumInflMat
-NumNomObl NumInflComp NumInflCompDer
-NumNomObl NumInflMat NumInflMatDer
+NumNomAbs[-Agr] NumAbsInfl                                                                                          # absolutive
+NumNomAbs[-Agr] ObliqueErg Case[Num_erg]                                                                            # ergative
+NumNomObl[-Agr] Oblique Case[Num]                                                                             # various cases, not ergative
+NumNomObl[-Agr] Oblique (Plural[Pl_j] Case[Pl_j] | Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])   # plural  
+NumNomObl[-Agr] Oblique Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                          # singular allative derivations
+NumNomObl[-Agr] Oblique Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                    # plural allative derivations
 
-NumNomObl NumInflLoc               #локатив
-NumNomObl NumInflLoc NumInflEss
-NumNomObl NumInflLoc NumInflElat
-NumNomObl NumInflLoc NumInflTrans
-NumNomObl NumInflLoc NumInflLat
-NumNomObl NumInflLoc NumInflLat NumInflTrans
-NumNomObl NumInflLoc NumInflLat NumInflElat
+# whith class agreement (4, 14)
+NounClass NomAbs[Agr] NumAbsInfl                                                                                       # absolutive
+NounClass NumNomAbs[Agr] ObliqueErg Case[Num_erg]                                                                      # ergative
+NounClass NumNomObl[Agr] Oblique Case[Num, -Erg]                                                                       # various cases, not ergative
+NounClass NumNomObl[Agr] Oblique (Plural[Pl_j] Case[Pl_j] | Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])   # plural  
+NounClass NumNomObl[Agr] Oblique Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                          # singular allative derivations
+NounClass NumNomObl[Agr] Oblique Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                    # plural allative derivations
 
-NounClass NumNomAbs NumAbsInfl              #абсолютив + согласование (4,14)
-NounClass NumNomOblAgr NumInfl              #склонение + согласование (4,14)
-NounClass NumNomOblAgr NumInflComp
-NounClass NumNomOblAgr NumInflMat
-NounClass NumNomOblAgr NumInflComp NumInflCompDer
-NounClass NumNomOblAgr NumInflMat NumInflMatDer
-
-NounClass NumNomOblAgr NumInflLoc               #локатив + согласование (4,14)
-NounClass NumNomOblAgr NumInflLoc NumInflEss
-NounClass NumNomOblAgr NumInflLoc NumInflElat
-NounClass NumNomOblAgr NumInflLoc NumInflTrans
-NounClass NumNomOblAgr NumInflLoc NumInflLat
-NounClass NumNomOblAgr NumInflLoc NumInflLat NumInflTrans
-NounClass NumNomOblAgr NumInflLoc NumInflLat NumInflElat
-
-
-#МНОЖЕСТВЕННОЕ ЧИСЛО
-
-NumNomAbs NumAbsInflPl              #абсолютив
-NumNomObl NumInflPl                 #склонение
-NumNomObl NumInflCompPl
-NumNomObl NumInflMatPl
-NumNomObl NumInflCompPl NumInflCompDer
-NumNomObl NumInflMatPl NumInflMatDer
-
-NumNomObl NumInflLocPl               #локатив
-NumNomObl NumInflLocPl NumInflEss
-NumNomObl NumInflLocPl NumInflElat
-NumNomObl NumInflLocPl NumInflTrans
-NumNomObl NumInflLocPl NumInflLat
-NumNomObl NumInflLocPl NumInflLat NumInflTrans
-NumNomObl NumInflLocPl NumInflLat NumInflElat
-
-NounClass NumNomAbs NumAbsInflPl              #абсолютив + согласование (4,14)
-NounClass NumNomOblAgr NumInflPl              #склонение + согласование (4,14)
-NounClass NumNomOblAgr NumInflCompPl
-NounClass NumNomOblAgr NumInflMatPl
-NounClass NumNomOblAgr NumInflCompPl NumInflCompDer
-NounClass NumNomOblAgr NumInflMatPl NumInflMatDer
-
-NounClass NumNomOblAgr NumInflLocPl               #локатив + согласование (4,14)
-NounClass NumNomOblAgr NumInflLocPl NumInflEss
-NounClass NumNomOblAgr NumInflLocPl NumInflElat
-NounClass NumNomOblAgr NumInflLocPl NumInflTrans
-NounClass NumNomOblAgr NumInflLocPl NumInflLat
-NounClass NumNomOblAgr NumInflLocPl NumInflLat NumInflTrans
-NounClass NumNomOblAgr NumInflLocPl NumInflLat NumInflElat
 
 # РОД
 
@@ -81,6 +32,9 @@ LEXICON NounClass
 # Несамостоятельные (att) вообще не склоняются, просто стоят в oblique
 # Самостоятельные (nom) склоняются все по Aliroev_I_Yu__Margoshvili_L_Yu_-_Kistiny стр. 97 (но я слабо себе это представляю)
 # Или только первые пять (Yakovlev стр. 61)
+
+LEXICON NumAbsInfl
+<abs>:
 
 LEXICON NumAttAbs
 цaI:цхьа #1
@@ -101,7 +55,7 @@ LEXICON NumAttAbs
 берхІитта:берхІитта
 ткъайоьсна:ткъайоьсна  
 ткъа:ткъа #20
-иъ:иъ[Arg] #4
+иъ:иъ[Agr] #4
 ейтта:ейтта[Agr] #14
 
 LEXICON NumAttObl
@@ -148,7 +102,7 @@ LEXICON NumNomAbs
 ейтта[Agr] #14
 иъ[Agr] #4
 
-LEXICON NumNomObl
+LEXICON NumNomObl # Я не уверена, что это валидно
 цaI:цхьа #1
 шиъ:ши
 кхоъ:кха #3 
@@ -169,3 +123,8 @@ LEXICON NumNomObl
 ткъа:ткъа #20
 иъ:еа[Agr] #4
 ейтта:ейтта[Agr] #14
+
+LEXICON Oblique
+<obl>:нн
+LEXICON ObliqueErg
+<obl>:мм

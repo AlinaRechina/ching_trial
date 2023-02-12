@@ -5,16 +5,19 @@ Alphabet
 ;
 
 Sets
-  	vowels = а е и у о ы;
-	consonants = б в г д й к л м н п р с т ф х ц ч ш щ ъ ь I
+		vowels = а е и у о ы;
+		consonants = б в г д й к л м н п р с т ф х ц ч ш щ ъ ь I;
 
 Rules
 
 "drop morpheme boundary"
 %>:0 <=> _ ;
 
-"vowel epenthesis before case markers"
-%{obl%}:а <=> consonants_;
-%{obl%}:а /<= consonants_й:й;
-%{obl%}:и <=> consonants_й;
-%{obl%}:0 <=> vowels_;
+"vowel epenthesis before case markers after consinants"
+%{obl%}:а <=> consonants _ ;
+
+"vowel epenthesis before plural forms with й"
+%{obl%}:и <=> consonants _ й:й;
+
+"no vowel epenthesis before case markers after vowels"
+%{obl%}:0 <=> vowels _ ;
