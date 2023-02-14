@@ -13,11 +13,13 @@ Rules
 "drop morpheme boundary"
 %>:0 <=> _ ;
 
-"vowel epenthesis before case markers after consinants"
-%{obl%}:а <=> consonants _ ;
+"vowel epenthesis before case markers after consonants"
+%{obl%}:а <=> consonants _ consonants-й;
 
 "vowel epenthesis before plural forms with й"
 %{obl%}:и <=> consonants _ й:й;
+	
 
 "no vowel epenthesis before case markers after vowels"
 %{obl%}:0 <=> vowels _ ;
+
