@@ -4,13 +4,13 @@ Plural[Pl_j] Case[Pl_j]        # plural
 Plural[Pl_sh] Case[Pl_sh]      # plural 
 Plural[Pl_shk] Case[Pl_shk]    # plural 
 
-Case[all_der, -Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
-Plural Case[all_der, Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
+Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
+Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
 
 #---------------------------------------------------------------------------------------------------------------
 
 LEXICON Case
-<abs>:[Pl_sh, Pl_j]           # По Яковлеву он может быть и ш, и й, добавляю в обе группы
+<abs>:abs[Pl_sh,Pl_j]        # По Яковлеву он может быть и ш, и й, добавляю в обе группы
 
 <obl><erg>:а[Pl_sh]           # самоучитель + Nichols + Jakovlev
 <obl><erg>:с[CVadjust]        # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)
@@ -18,40 +18,40 @@ LEXICON Case
 <obl><erg>:ие                 # Nichols (моё предположение: записывается как e?) стр. 31: only on -ie stems
 <obl><erg>:ма[Num_erg]            # у числительных, меняет предыдущее undelying н на м (Jakovlev)
 
-<obl><gen>:н[CVadjust, Pl_j, Num]  # самоучитель + Nichols + Jakovlev
+<obl><gen>:н[CVadjust,Pl_j,Num]  # самоучитель + Nichols + Jakovlev
 # в самоучителе есть ещё ен, он, ун, но это, я думаю, гласный основы + "н"
 
 # Dative
-<obl><dat>:на[CVadjust, Pl_sh, Num]  # самоучитель + Nichols + Jakovlev
+<obl><dat>:на[CVadjust,Pl_sh,Num]  # самоучитель + Nichols + Jakovlev
 
 # Instrumentalis
-<obl><ins>:ца[CVadjust, Pl_sh, Num]  # самоучитель + Nichols + Jacovlev
+<obl><ins>:ца[CVadjust,Pl_sh,Num]  # самоучитель + Nichols + Jacovlev
 
 
 # вещественный = locative
-<obl><loc>:х[CVadjust, Pl_j, Num]    # самоучитель + Nichols + Jakovlev 
-<obl><loc>:ха[CVadjust, Pl_j, Num]   # Jakovlev - производная форма
+<obl><loc>:х[CVadjust,Pl_j,Num]    # самоучитель + Nichols + Jakovlev 
+<obl><loc>:ха[CVadjust,Pl_j,Num]   # Jakovlev - производная форма
 
 # местный = allative
-<obl><all>:га[all_der, Num]              # самоучитель + Nichols + Jakovlev (только гл. - тип Б стр. 26) (только 4 склонение - стр. 23)
+<obl><all>:га[all_der,Num]              # самоучитель + Nichols + Jakovlev (только гл. - тип Б стр. 26) (только 4 склонение - стр. 23)
 <obl><all>:е[all_der]               # самоучитель + Nichols (ie) + Jakovlev ([иэ])
-<obl><all>:а[all_der, Pl_shk]       # самоучитель + Jacovlev (архаичное, используется для производных падежей только во мн.ч.)
+<obl><all>:а[all_der,Pl_shk]       # самоучитель + Jacovlev (архаичное, используется для производных падежей только во мн.ч.)
 
 # сравнительный = comparative
-<obl><comp>:л[CVadjust, Num]    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
-<obl><comp>:ла[CVadjust, Num]   # самоучитель + Jakovlev (по нему - производная форма)
-<obl><comp>:лла[CVadjust, Num]  # самоучитель + Jakovlev (по нему - производная форма)
+<obl><comp>:л[CVadjust,Num]    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
+<obl><comp>:ла[CVadjust,Num]   # самоучитель + Jakovlev (по нему - производная форма)
+<obl><comp>:лла[CVadjust,Num]  # самоучитель + Jakovlev (по нему - производная форма)
 
 LEXICON AllDer # Nichols (названия) + Jakovlev (окончания)
 <location>:хь
 <direction>:хьа[der1]
-<source>:ра[CVadjust, der2]        
+<source>:ра[CVadjust,der2]        
 <across>:хула[der2]
 
 LEXICON Plural
-<pl>:ш[CVadjust, Pl_sh]      # Yakovlev
-<pl>:шк[CVadjust, Pl_shk]    # Yakovlev
-<pl>:й[CVadjust, Pl_j]       # Yakovlev (+йил в типе В на стр. 26??? - можно прописать отдельно)
+<pl>:ш[CVadjust,Pl_sh]      # Yakovlev
+<pl>:шк[CVadjust,Pl_shk]    # Yakovlev
+<pl>:й[CVadjust,Pl_j]       # Yakovlev (+йил в типе В на стр. 26??? - можно прописать отдельно)
 
 
 # [CVadjust] скорее всего потом уберу, нужно только понять, что сделать в twol.
@@ -59,3 +59,4 @@ LEXICON Plural
 # ВОПРОС:
 # Производные падежи от вещественного (locative) и сравнительного (comparative)
 # как будто ничего не значат отдельного. Оставить их как просто соответствующие падежи?
+
