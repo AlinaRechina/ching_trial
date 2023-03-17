@@ -22,4 +22,3 @@ Rules
 
 "no vowel epenthesis before case markers after vowels"
 %{obl%}:0 <=> vowels _ ;
-

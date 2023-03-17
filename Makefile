@@ -12,3 +12,4 @@ ch_lexd.lexd: $(wildcard *ch.lexd)
 	cat *ch.lexd > ch_lexd.lexd
 clean:
 	rm *.hfst
+	rm ch_lexd.lexd

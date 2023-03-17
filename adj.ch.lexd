@@ -2,23 +2,31 @@
 
 PATTERNS
 #substantive use
-AdjOblForms[-Agr] AdjCase[abs]
-AdjOblForms[-Agr] AdjOblique[u] Case[Adj_u]
-AdjOblForms[-Agr] AdjOblique[un] Case[Adj_un]
-AdjOblForms[-Agr] AdjOblique[unp] Case[Adj_unp]
+AdjOblForms[-Agr] (AdjCase[abs] | AdjCase[plabs]) #absolutive
+
+AdjOblForms[-Agr] (AdjOblique[u] Case[Adj_u] | AdjOblique[un] Case[Adj_un] | AdjOblique[unp] Case[Adj_unp])   # singular oblique cases
+
+AdjOblForms[-Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                       # plural -чу- 
+AdjOblForms[-Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])        # plural -чу-
+AdjOblForms[-Agr] (AdjOblique[pl_a]  Case[u] | AdjOblique[pl_a]  Case[un] | AdjOblique[pl_ap] Case[upn])     # plural -чар-, -чер-, -чаьр-
+
 
 #attributive use (добавить Noun позже)
 AdjOblForms[OblChu,-Agr] AdjOblique[u]
 AdjAttrAbs[Oblchu,-Agr]  #+существительные в абсолютиве
 AdjAttrAbs[OblSame,-Agr] #+существительные всех форм
 
+
 #same patterns, but with CLASS AGREEMENT
 #substantive use
-#substantive use
-NounClass AdjOblForms[Agr] AdjCase[abs]
-NounClass AdjOblForms[Agr] AdjOblique[u] Case[Adj_u]
-NounClass AdjOblForms[Agr] AdjOblique[un] Case[Adj_un]
-NounClass AdjOblForms[Agr] AdjOblique[unp] Case[Adj_unp]
+NounClass AdjOblForms[Agr] (AdjCase[abs] | AdjCase[plabs]) #absolutive
+
+NounClass AdjOblForms[Agr] (AdjOblique[u] Case[Adj_u] | AdjOblique[un] Case[Adj_un] | AdjOblique[unp] Case[Adj_unp])   # singular oblique cases
+
+NounClass AdjOblForms[Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                       # plural -чу- 
+NounClass AdjOblForms[Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])        # plural -чу-
+NounClass AdjOblForms[Agr] (AdjOblique[pl_a]  Case[u] | AdjOblique[pl_a]  Case[un] | AdjOblique[pl_ap] Case[upn])     # plural -чар-, -чер-, -чаьр-
+
 
 #attributive use (добавить Noun позже)
 NounClass AdjOblForms[OblChu,Agr] AdjOblique[u]
@@ -33,14 +41,18 @@ LEXICON NounClass
 <cl4>:д #мн
 
 LEXICON AdjCase
-<abs>:ниг[abs] #nig!!
-<gen>:ан[upn] # variation of genitive for adjectives -чуьнан
+<abs>:ниг[abs]
+<pl><abs>:наш[plabs]
 
 # УДЛИНЕНИЕ ОСНОВЫ
 LEXICON AdjOblique
 <obl>:чу[u]
 <obl>:чун[un]
 <obl>:чуьн[upn]
+<obl>:чи[Pl_j]
+<obl><pl>:чер[pl_e]
+<obl><pl>:чар[pl_a]
+<obl><pl>:чьар[pl_ap]
 
 LEXICON AdjAttrAbs
 базаран[OblSame]
