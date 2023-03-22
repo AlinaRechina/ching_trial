@@ -5,10 +5,11 @@ PATTERNS
 AdjOblForms[-Agr] (AdjCase[abs] | AdjCase[plabs]) #absolutive
 
 AdjOblForms[-Agr] (AdjOblique[u] Case[Adj_u] | AdjOblique[un] Case[Adj_un] | AdjOblique[unp] Case[Adj_unp])   # singular oblique cases
+AdjOblForms[-Agr] AdjOblique[upn] Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])                     # derivated allative cases
 
-AdjOblForms[-Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                       # plural -чу- 
-AdjOblForms[-Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])        # plural -чу-
-AdjOblForms[-Agr] (AdjOblique[pl_a]  Case[u] | AdjOblique[pl_a]  Case[un] | AdjOblique[pl_ap] Case[upn])     # plural -чар-, -чер-, -чаьр-
+AdjOblForms[-Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
+AdjOblForms[-Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] (Case[Pl_shk] | Case[Pl_shk,all_der] (AllDer | AllDer[der1] AllDer[der2])))                         # plural -чу-
+AdjOblForms[-Agr] (AdjOblique[pl_a]  Case[Adj_u] | AdjOblique[pl_a]  Case[Adj_un] | AdjOblique[pl_ap] (Case[Adj_upn] | Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])))     # plural -чар-, -чер-, -чаьр-
 
 
 #attributive use (добавить Noun позже)
@@ -22,10 +23,11 @@ AdjAttrAbs[OblSame,-Agr] #+существительные всех форм
 NounClass AdjOblForms[Agr] (AdjCase[abs] | AdjCase[plabs]) #absolutive
 
 NounClass AdjOblForms[Agr] (AdjOblique[u] Case[Adj_u] | AdjOblique[un] Case[Adj_un] | AdjOblique[unp] Case[Adj_unp])   # singular oblique cases
+NounClass AdjOblForms[Agr] AdjOblique[upn] Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])                          # derivated allative cases
 
-NounClass AdjOblForms[Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                       # plural -чу- 
-NounClass AdjOblForms[Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])        # plural -чу-
-NounClass AdjOblForms[Agr] (AdjOblique[pl_a]  Case[u] | AdjOblique[pl_a]  Case[un] | AdjOblique[pl_ap] Case[upn])     # plural -чар-, -чер-, -чаьр-
+NounClass AdjOblForms[Agr] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
+NounClass AdjOblForms[Agr] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] (Case[Pl_shk] | Case[Pl_shk,all_der] (AllDer | AllDer[der1] AllDer[der2])))                         # plural -чу-
+NounClass AdjOblForms[Agr] (AdjOblique[pl_a]  Case[Adj_u] | AdjOblique[pl_a]  Case[Adj_un] | AdjOblique[pl_ap] (Case[Adj_upn] | Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])))     # plural -чар-, -чер-, -чаьр-
 
 
 #attributive use (добавить Noun позже)
@@ -69,7 +71,7 @@ LEXICON AdjAttrAbs
 оперни[OblSame]
 уллохь[OblSame]
 больнични[OblSame]
-отчѐтни[OblSame]
+отчетни[OblSame]
 меньшевистски[OblSame]
 материалистически[OblSame]
 галантерейни[OblSame]
@@ -978,7 +980,7 @@ LEXICON AdjOblForms
 оперни:оперни[OblSame]
 уллохь:уллохиэ[OblSame]
 больнични:больнични[OblSame]
-отчѐтни:отчѐтни[OblSame]
+отчетни:отчетни[OblSame]
 меньшевистски:меньшевистски[OblSame]
 материалистически:материалистически[OblSame]
 галантерейни:галантерейни[OblSame]

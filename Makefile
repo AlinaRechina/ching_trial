@@ -13,3 +13,5 @@ ch_lexd.lexd: $(wildcard *ch.lexd)
 clean:
 	rm *.hfst
 	rm ch_lexd.lexd
+
+# Чтобы всё запустить: hfst-fst2strings

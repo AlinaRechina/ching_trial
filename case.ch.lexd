@@ -10,37 +10,37 @@ Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural a
 #---------------------------------------------------------------------------------------------------------------
 
 LEXICON Case
-<abs>:abs[Pl_sh,Pl_j]        # По Яковлеву он может быть и ш, и й, добавляю в обе группы
+<abs>:abs[Pl_sh,Pl_j,Pro_abs]        # По Яковлеву он может быть и ш, и й, добавляю в обе группы
 
-<obl><erg>:а[Pl_sh]           # самоучитель + Nichols + Jakovlev
-<obl><erg>:с[CVadjust]        # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)
-<obl><erg>:о[Adj_u]                  # самоучитель + Nichols + Jakovlev ("уо", записывается как о - стр. 20)
-<obl><erg>:ие                 # Nichols (моё предположение: записывается как e?) стр. 31: only on -ie stems
-<obl><erg>:ма[Num_erg]            # у числительных, меняет предыдущее undelying н на м (Jakovlev)
+<erg>:а[Pl_sh]           # самоучитель + Nichols + Jakovlev
+<erg>:с[CVadjust]        # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)
+<erg>:о[Adj_u,Pro_erg]                  # самоучитель + Nichols + Jakovlev ("уо", записывается как о - стр. 20)
+<erg>:ие                 # Nichols (моё предположение: записывается как e?) стр. 31: only on -ie stems
+<erg>:ма[Num_erg]            # у числительных, меняет предыдущее undelying н на м (Jakovlev)
 
-<obl><gen>:н[CVadjust,Pl_j,Num,Adj_u]  # самоучитель + Nichols + Jakovlev
+<gen>:н[CVadjust,Pl_j,Num,Adj_u,Pro_gen]  # самоучитель + Nichols + Jakovlev
 # в самоучителе есть ещё ен, он, ун, но это, я думаю, гласный основы + "н"
 
 # Dative
-<obl><dat>:на[CVadjust,Pl_sh,Num,Adj_un]  # самоучитель + Nichols + Jakovlev
+<dat>:на[CVadjust,Pl_sh,Num,Adj_un,Pro_dat]  # самоучитель + Nichols + Jakovlev
 
 # Instrumentalis
-<obl><ins>:ца[CVadjust,Pl_sh,Num,Adj_upn]  # самоучитель + Nichols + Jacovlev
+<ins>:ца[CVadjust,Pl_sh,Num,Adj_upn,Pro_ins]  # самоучитель + Nichols + Jacovlev
 
 
 # вещественный = locative
-<obl><loc>:х[CVadjust,Pl_j,Num,Adj_u]    # самоучитель + Nichols + Jakovlev 
-<obl><loc>:ха[CVadjust,Pl_j,Num,Adj_u]   # Jakovlev - производная форма
+<loc>:х[CVadjust,Pl_j,Num,Adj_u,Pro_loc]    # самоучитель + Nichols + Jakovlev 
+<loc>:ха[CVadjust,Pl_j,Num,Adj_u,Pro_loc]   # Jakovlev - производная форма
 
 # местный = allative
-<obl><all>:га[all_der,Num,Adj_upn]              # самоучитель + Nichols + Jakovlev (только гл. - тип Б стр. 26) (только 4 склонение - стр. 23)
-<obl><all>:е[all_der]               # самоучитель + Nichols (ie) + Jakovlev ([иэ])
-<obl><all>:а[all_der,Pl_shk]       # самоучитель + Jacovlev (архаичное, используется для производных падежей только во мн.ч.)
+<all>:га[all_der,Num,Adj_upn,Pro_all]   # самоучитель + Nichols + Jakovlev (только гл. - тип Б стр. 26) (только 4 склонение - стр. 23)
+<all>:е[all_der]               # самоучитель + Nichols (ie) + Jakovlev ([иэ])
+<all>:а[all_der,Pl_shk]       # самоучитель + Jacovlev (архаичное, используется для производных падежей только во мн.ч.)
 
 # сравнительный = comparative
-<obl><comp>:л[CVadjust,Num,Adj_u]    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
-<obl><comp>:ла[CVadjust,Num]   # самоучитель + Jakovlev (по нему - производная форма)
-<obl><comp>:лла[CVadjust,Num,Adj_u]  # самоучитель + Jakovlev (по нему - производная форма)
+<comp>:л[CVadjust,Num,Adj_u,Pro_comp]    # Nichols + Jakovlev (стр. 23 - говорит, что Cа/_л, V/_л)
+<comp>:ла[CVadjust,Num]                  # самоучитель + Jakovlev (по нему - производная форма)
+<comp>:лла[CVadjust,Num,Adj_u,Pro_comp]  # самоучитель + Jakovlev (по нему - производная форма)
 
 LEXICON AllDer # Nichols (названия) + Jakovlev (окончания)
 <location>:хь
