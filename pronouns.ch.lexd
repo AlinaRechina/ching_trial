@@ -8,12 +8,12 @@ PersPro[dat] Case[Pro_dat]
 PersPro[loc] Case[Pro_loc]
 PersPro[ins] Case[Pro_ins]
 PersPro[comp] Case[Pro_comp]
-PersPro[all] Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])?
+PersPro[all] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2]))?
 
 # 3d person
 Pers3Pro[abs] Case[abs]
 Pers3Pro[obl] (Case[Adj_u,-Pro_gen] | Pers3ProObl[pn] (Case[Adj_upn] | Case[Pro_Gen]) | Pers3ProObl[n] Case[Adj_un])
-Pers3Pro[obl] Case[Pro_all] (AllDer | AllDer[der1] AllDer[der2])
+Pers3Pro[obl] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2]))
 
 LEXICON PersPro  # Personal pronouns 
 # не уверена насчёт выбора такой записи
