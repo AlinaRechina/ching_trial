@@ -1,7 +1,7 @@
 PATTERNS
 
 # PERSONAL PRONOUNS INFLECTION
-PersPro[abs] Case[Pro_abs]
+PersPro[abs]
 PersPro[gen] Case[Pro_gen]
 PersPro[erg] Case[Pro_erg]
 PersPro[dat] Case[Pro_dat]

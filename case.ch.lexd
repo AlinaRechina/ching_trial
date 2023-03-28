@@ -4,13 +4,12 @@ Plural[Pl_j] Case[Pl_j]        # plural
 Plural[Pl_sh] Case[Pl_sh]      # plural 
 Plural[Pl_shk] Case[Pl_shk]    # plural 
 
-Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
-Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
+#Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
+#Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
 
 #---------------------------------------------------------------------------------------------------------------
 
 LEXICON Case
-<abs>:abs[Pl_sh,Pl_j,Pro_abs]        # По Яковлеву он может быть и ш, и й, добавляю в обе группы
 
 <erg>:а[Pl_sh]           # самоучитель + Nichols + Jakovlev
 <erg>:с[CVadjust]        # самоучитель + Nichols + Jakovlev (говорит, что это =ас после гласных)

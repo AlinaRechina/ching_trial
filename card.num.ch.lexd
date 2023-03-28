@@ -4,20 +4,20 @@ PATTERNS
 (NumAttAbs[-Agr] | NumAttObl[-Agr])                #no inflection
 NounClass (NumAttAbs[Agr] | NumAttObl[Agr])  #agreement + no inflection
 
-NumNomAbs[-Agr] NumAbsInfl                                                                                          # absolutive
+NumNomAbs[-Agr]                                                                                                     # absolutive
 NumNomAbs[-Agr] ObliqueErg Case[Num_erg]                                                                            # ergative
-NumNomObl[-Agr] Oblique Case[Num]                                                                             # various cases, not ergative
-NumNomObl[-Agr] Oblique (Plural[Pl_j] Case[Pl_j] | Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])   # plural  
-NumNomObl[-Agr] Oblique Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                          # singular allative derivations
-NumNomObl[-Agr] Oblique Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                    # plural allative derivations
+NumNomObl[-Agr] Oblique Case[Num]                                                                                   # various cases, not ergative
+NumNomObl[-Agr] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
+NumNomObl[-Agr] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                               # singular allative derivations
+NumNomObl[-Agr] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                         # plural allative derivations
 
 # whith class agreement (4, 14)
-NounClass NumNomAbs[Agr] NumAbsInfl                                                                                       # absolutive
-NounClass NumNomAbs[Agr] ObliqueErg Case[Num_erg]                                                                      # ergative
-NounClass NumNomObl[Agr] Oblique Case[Num,-Erg]                                                                       # various cases, not ergative
-NounClass NumNomObl[Agr] Oblique (Plural[Pl_j] Case[Pl_j] | Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])   # plural  
-NounClass NumNomObl[Agr] Oblique Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                          # singular allative derivations
-NounClass NumNomObl[Agr] Oblique Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?                    # plural allative derivations
+NounClass NumNomAbs[Agr]                                                                                                     # absolutive
+NounClass NumNomAbs[Agr] ObliqueErg Case[Num_erg]                                                                            # ergative
+NounClass NumNomObl[Agr] Oblique Case[Num,-Erg]                                                                              # various cases, not ergative
+NounClass NumNomObl[Agr] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
+NounClass NumNomObl[Agr] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                               # singular allative derivations
+NounClass NumNomObl[Agr] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                         # plural allative derivations
 
 
 # РОД
@@ -33,8 +33,6 @@ LEXICON NounClass
 # Самостоятельные (nom) склоняются все по Aliroev_I_Yu__Margoshvili_L_Yu_-_Kistiny стр. 97 (но я слабо себе это представляю)
 # Или только первые пять (Yakovlev стр. 61)
 
-LEXICON NumAbsInfl
-<abs>:abs
 
 LEXICON NumAttAbs
 цaI:цхьа #1
