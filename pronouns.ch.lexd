@@ -68,8 +68,6 @@ LEXICON Pers3ProObl
 н[n]
 
 
-#LEXICON PersPossPro # Personal posessive pronouns
-
 #LEXICON ReflPro # Reflexive pronouns (возвратные местоимения)
 
 #LEXICON ReflPossPro # Reflexive posessive pronouns (возвратно-притяжательные местоимения)

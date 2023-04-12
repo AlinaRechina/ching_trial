@@ -1,0 +1,30 @@
+PATTERNS
+# склоняются как прилагательные
+PossProNom[-pl] [<pro><poss>:] AdjCase[abs] #absolutive
+PossProNom[-pl] [<pro><poss>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
+PossProNom[-pl] [<pro><poss>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
+
+PossProNom[pl] [<pro><poss>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
+PossProNom[pl] [<pro><poss>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer[der1] AllDer[der2]))))))                 # plural -чу-
+
+#attributive use
+PossProAttr [<pro><poss>:]
+
+LEXICON PossProAttr
+сан        # 1 person
+тхан
+вайн
+хьан       # 2 person
+шун
+цуьнан     # 3 person
+церан
+
+
+LEXICON PossProNom
+сан:сай
+тхан:тхай[pl]
+вайн:вай[pl]
+хьан:хьай
+шун:шуьн[pl]
+цуьнан:цуьн
+церан:цера[pl]
