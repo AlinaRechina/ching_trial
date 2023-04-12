@@ -1,8 +1,8 @@
-PATTERNS # Тут нужно будет добавить предшествующие части речи
-Case                           # singular
-Plural[Pl_j] Case[Pl_j]        # plural 
-Plural[Pl_sh] Case[Pl_sh]      # plural 
-Plural[Pl_shk] Case[Pl_shk]    # plural 
+#PATTERNS # Тут нужно будет добавить предшествующие части речи
+#Case                           # singular
+#Plural[Pl_j] Case[Pl_j]        # plural 
+#Plural[Pl_sh] Case[Pl_sh]      # plural 
+#Plural[Pl_shk] Case[Pl_shk]    # plural 
 
 #Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
 #Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
@@ -52,10 +52,11 @@ LEXICON Plural
 <pl>:шк[CVadjust,Pl_shk]    # Yakovlev
 <pl>:й[CVadjust,Pl_j]       # Yakovlev (+йил в типе В на стр. 26??? - можно прописать отдельно)
 
+# РОД
+LEXICON NounClass
+<cl1>:й #ж+ед
+<cl2>:б #мн
+<cl3>:в #м+ед	
+<cl4>:д #мн
 
 # [CVadjust] скорее всего потом уберу, нужно только понять, что сделать в twol.
-
-# ВОПРОС:
-# Производные падежи от вещественного (locative) и сравнительного (comparative)
-# как будто ничего не значат отдельного. Оставить их как просто соответствующие падежи?
-
