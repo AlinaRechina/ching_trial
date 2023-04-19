@@ -4,7 +4,7 @@ PATTERNS
 #substantive use
 AdjOblForms[-Agr] [<adj>:] #absolutive
 
-AdjOblForms[-Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
+AdjOblForms[-Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
 AdjOblForms[-Agr] [<adj>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
 
 AdjOblForms[-Agr] [<adj>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
@@ -22,7 +22,7 @@ AdjAttrAbs[-Agr] [<adj>:]
 
 NounClass AdjOblForms[Agr] [<adj>:] #absolutive
 
-NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
+NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
 NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases
 
 NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                             # plural -чу- 

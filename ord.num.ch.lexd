@@ -2,7 +2,7 @@ PATTERNS
 # склоняются как прилагательные
 OrdNum[-Agr] [<num>:] OrdSuff #absolutive
 
-OrdNum[-Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
+OrdNum[-Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
 OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
 
 OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
@@ -19,7 +19,7 @@ OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[u]
 
 NounClass OrdNum[Agr] [<num>:] OrdSuff #absolutive
 
-NounClass OrdNum[Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
+NounClass OrdNum[Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
 NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases
 
 NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                             # plural -чу- 

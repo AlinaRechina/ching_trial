@@ -1,11 +1,11 @@
 PATTERNS
 # склоняются как прилагательные
-PossProNom[-pl] [<pro><poss>:] AdjCase[abs] #absolutive
-PossProNom[-pl] [<pro><poss>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[unp] Case[Adj_unp]))   # singular oblique cases
-PossProNom[-pl] [<pro><poss>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
+PossProNom [<pro><poss>:] AdjCase[abs] #absolutive
+PossProNom [<pro><poss>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
+PossProNom [<pro><poss>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
 
-PossProNom[pl] [<pro><poss>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
-PossProNom[pl] [<pro><poss>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer[der1] AllDer[der2]))))))                 # plural -чу-
+#PossProNom[pl] [<pro><poss>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
+#PossProNom[pl] [<pro><poss>:] AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer[der1] AllDer[der2]))))))                 # plural -чу-
 
 #attributive use
 PossProAttr [<pro><poss>:]
