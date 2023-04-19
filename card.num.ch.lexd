@@ -8,16 +8,16 @@ NumNomAbs[-Agr] [<num>:]                                                        
 NumNomAbs[-Agr] [<num>:] ObliqueErg Case[Num_erg]                                                                            # ergative
 NumNomObl[-Agr] [<num>:] Oblique Case[Num]                                                                                   # various cases, not ergative
 NumNomObl[-Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
-NumNomObl[-Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                               # singular allative derivations
-NumNomObl[-Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                         # plural allative derivations
+NumNomObl[-Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
+NumNomObl[-Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
 
 # whith class agreement (4, 14)
 NounClass NumNomAbs[Agr] [<num>:]                                                                                                    # absolutive
 NounClass NumNomAbs[Agr] [<num>:] ObliqueErg Case[Num_erg]                                                                            # ergative
 NounClass NumNomObl[Agr] [<num>:] Oblique Case[Num,-Erg]                                                                              # various cases, not ergative
 NounClass NumNomObl[Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
-NounClass NumNomObl[Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                               # singular allative derivations
-NounClass NumNomObl[Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer[der1] AllDer[der2]))?                         # plural allative derivations
+NounClass NumNomObl[Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
+NounClass NumNomObl[Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
 
 
 # СПРАВКА

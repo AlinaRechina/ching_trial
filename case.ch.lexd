@@ -4,8 +4,8 @@
 #Plural[Pl_sh] Case[Pl_sh]      # plural 
 #Plural[Pl_shk] Case[Pl_shk]    # plural 
 
-#Case[all_der,-Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?           # singular allative derivations
-#Plural Case[all_der,Pl_shk] (AllDer | AllDer[der1] AllDer[der2])?     # plural allative derivations
+#Case[all_der,-Pl_shk] (AllDer | AllDer1 AllDer2)?           # singular allative derivations
+#Plural Case[all_der,Pl_shk] (AllDer | AllDer1 AllDer2)?     # plural allative derivations
 
 #---------------------------------------------------------------------------------------------------------------
 
@@ -43,9 +43,16 @@ LEXICON Case
 
 LEXICON AllDer # Nichols (названия) + Jakovlev (окончания)
 <location>:хь
-<direction>:хьа[der1]
-<source>:ра[CVadjust,der2]        
-<across>:хула[der2]
+<direction>:хьа
+<source>:ра       #CVadjust 
+<across>:хула
+
+LEXICON AllDer1
+<direction>:хьа
+
+LEXICON AllDer2
+<source>:ра       #CVadjust 
+<across>:хула
 
 LEXICON Plural
 <pl>:ш[CVadjust,Pl_sh]      # Yakovlev

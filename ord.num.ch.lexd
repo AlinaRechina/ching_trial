@@ -3,11 +3,11 @@ PATTERNS
 OrdNum[-Agr] [<num>:] OrdSuff #absolutive
 
 OrdNum[-Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
-OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases                          
+OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer1 AllDer2)) # derivated allative cases                          
 
 OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
-OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer[der1] AllDer[der2]))))))                      # plural -чу-
-OrdNum[-Agr] [<num>:] OrdSuff ((AdjOblique[pl_a]  Case[Adj_u]) | (AdjOblique[pl_a]  Case[Adj_un]) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2]))))))     # plural -чар-, -чер-, -чаьр-
+OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer1 AllDer2))))))                      # plural -чу-
+OrdNum[-Agr] [<num>:] OrdSuff ((AdjOblique[pl_a]  Case[Adj_u]) | (AdjOblique[pl_a]  Case[Adj_un]) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
 
 
 #attributive use
@@ -20,11 +20,11 @@ OrdNum[-Agr] [<num>:] OrdSuff AdjOblique[u]
 NounClass OrdNum[Agr] [<num>:] OrdSuff #absolutive
 
 NounClass OrdNum[Agr] [<num>:] OrdSuff ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
-NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2])) # derivated allative cases
+NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer1 AllDer2)) # derivated allative cases
 
 NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                             # plural -чу- 
-NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer[der1] AllDer[der2]))))))        # plural -чу-
-NounClass OrdNum[Agr] [<num>:] OrdSuff ((AdjOblique[pl_a] (Case[Adj_u] | Case[Adj_un])) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer[der1] AllDer[der2]))))))     # plural -чар-, -чер-, -чаьр-
+NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer1 AllDer2))))))        # plural -чу-
+NounClass OrdNum[Agr] [<num>:] OrdSuff ((AdjOblique[pl_a] (Case[Adj_u] | Case[Adj_un])) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
 
 #attributive use
 NounClass OrdNum[Agr] [<num>:] OrdSuff AdjOblique[u]
