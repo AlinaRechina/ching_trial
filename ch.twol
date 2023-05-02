@@ -18,7 +18,6 @@ Rules
 
 "vowel epenthesis before plural forms with й"
 %{obl%}:и <=> consonants _ й:й;
-	
 
 "no vowel epenthesis before case markers after vowels"
 %{obl%}:0 <=> vowels _ ;

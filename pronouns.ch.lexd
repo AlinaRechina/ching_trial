@@ -11,9 +11,11 @@ PersPro[comp] [<pro>:] Case[Pro_comp]
 PersPro[all] [<pro>:] Case[Pro_all] (AllDer | (AllDer1 AllDer2))?
 
 # 3d person
-Pers3Pro[abs] [<pro>:] Case[abs]
-Pers3Pro[obl] [<pro>:] (Case[Adj_u,-Pro_gen] | Pers3ProObl[pn] (Case[Adj_upn] | Case[Pro_Gen]) | Pers3ProObl[n] Case[Adj_un])
-Pers3Pro[obl] [<pro>:] Case[Pro_all] (AllDer | (AllDer1 AllDer2))
+Pers3Pro[abs] [<pro>:]
+Pers3Pro[obl] [<pro>:] (Case[Pro_erg] | Case[Pro_comp])                                     # no oblique extension
+Pers3Pro[obl] [<pro>:] Pers3ProObl[n] (Case[Pro_dat] | Case[Pro_loc])                       # -н- oblique extension
+Pers3Pro[obl] [<pro>:] Pers3ProObl[pn] (Case[Adj_upn] | Case[Pro_gen])                      # -ьн- oblique extension
+Pers3Pro[obl] [<pro>:] Pers3ProObl[pn] Case[Pro_all] (AllDer | (AllDer1 AllDer2))           # allative derivations
 
 LEXICON PersPro  # Personal pronouns 
 # не уверена насчёт выбора такой записи
@@ -64,8 +66,8 @@ LEXICON Pers3Pro
 
 LEXICON Pers3ProObl
 # возможно надо завести пустую морфему для нулевого obl?
-ьн[pn]
-н[n]
+<obl>:ьн[pn]
+<obl>:н[n]
 
 
 #LEXICON ReflPro # Reflexive pronouns (возвратные местоимения)
