@@ -7,3 +7,10 @@ analysis,form,mustpass,source,page,description
 пхиъ<num><ordinal>,пхоьазлагIа,pass,Yakovlev,69,ordinal numerals
 тхо<pro><all><direction><across>,тхоьгахьахула,pass,Yakovlev,85,personal pronouns
 иза<pro><obl><loc>,цунаха,pass,Yakovlev,86,personal pronouns
+церан<pro><poss><obl><pl><all><source>,церачушкара,pass,Yakovlev,92,personal pronouns
+оьрсийн<adj>,оьрсийн,pass,Yakovlev,48,adjectives
+<cl1>оца<adj>,йоца,pass,Aliroyev,87,adjectives
+ледар<adj><obl><pl><loc>,ледарчараха,pass,Yakovlev,44,adjectives
+ледара<adj><obl><pl><loc>,ледарчараха,pass,overgeneration,-,adjectives
+ледар<adj><obl><pl><loc>,ледарчийх,pass,Yakovlev,44,adjectives
+ледара<adj><obl><pl><loc>,ледарчийх,pass,overgeneration,-,adjectives

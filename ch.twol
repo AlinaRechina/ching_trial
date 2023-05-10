@@ -1,12 +1,12 @@
 Alphabet
     а б в г д и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю I я
-	! а как быть с диграфами?
 	%{obl%}:а %{obl%}:и %{obl%}:0
 ;
 
 Sets
 		vowels = а е и у о ы;
-		consonants = б в г д й к л м н п р с т ф х ц ч ш щ ъ ь I;
+		liquids = л й р;
+		consonants = б в г д к л м н п р с т ф х ц ч ш щ ъ ь I й;
 
 Rules
 
@@ -14,10 +14,13 @@ Rules
 %>:0 <=> _ ;
 
 "vowel epenthesis before case markers after consonants"
-%{obl%}:а <=> consonants _ consonants-й;
-
-"vowel epenthesis before plural forms with й"
-%{obl%}:и <=> consonants _ й:й;
+%{obl%}:а <=> consonants-liquids _ consonants-й;
 
 "no vowel epenthesis before case markers after vowels"
 %{obl%}:0 <=> vowels _ ;
+
+"no vowel epenthesis before case markers after й, л, р"
+%{obl%}:0 <=> liquids _ consonants-й;
+
+"vowel epenthesis before plural forms with й"
+%{obl%}:и <=> consonants-й _ й:й;

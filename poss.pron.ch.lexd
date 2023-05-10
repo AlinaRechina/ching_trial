@@ -4,8 +4,9 @@ PossProNom [<pro><poss>:] AdjCase[abs] #absolutive
 PossProNom [<pro><poss>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
 PossProNom [<pro><poss>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer1 AllDer2)) # derivated allative cases                          
 
-#PossProNom[pl] [<pro><poss>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
-#PossProNom[pl] [<pro><poss>:] AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer1 AllDer2))))))                 # plural -чу-
+PossProNom [<pro><poss>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
+PossProNom [<pro><poss>:] AdjOblique[u] (Plural[Pl_sh] Case[Pl_sh] | Plural[Pl_shk] Case[Pl_shk])
+PossProNom [<pro><poss>:] AdjOblique[u] Plural[Pl_shk] Case[all_der,Pl_shk] (AllDer | (AllDer1 AllDer2))            
 
 #attributive use
 PossProAttr [<pro><poss>:]
@@ -21,10 +22,10 @@ LEXICON PossProAttr
 
 
 LEXICON PossProNom
-сан:сай
+сан:сай          # 1 person
 тхан:тхай[pl]
 вайн:вай[pl]
-хьан:хьай
+хьан:хьай        # 2 person
 шун:шуьн[pl]
-цуьнан:цуьн
+цуьнан:цуьн      # 3 person
 церан:цера[pl]
