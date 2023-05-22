@@ -1,16 +1,14 @@
-# видимо, прилагательыне тоже пренадлежат к 4 склонению
-
 PATTERNS
 #substantive use
 AdjOblForms[-Agr] [<adj>:] #absolutive
 
-AdjOblForms[-Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
+AdjOblForms[-Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]) | (AdjOblique[ch] Case[Adj_ch]))   # singular oblique cases
 AdjOblForms[-Agr] [<adj>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer1 AllDer2)) # derivated allative cases                  
 
-AdjOblForms[-Agr] [<adj>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                                      # plural -чу- 
-AdjOblForms[-Agr] [<adj>:] AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer1 AllDer2))))))                      # plural -чу-
-AdjOblForms[-Agr] [<adj>:] ((AdjOblique[pl_a]  Case[Adj_u]) | (AdjOblique[pl_a]  Case[Adj_un]) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
-
+AdjOblForms[-Agr] [<adj>:] (AdjOblique[ch] Plural[Pl_j] Case[Pl_j] | AdjOblique[u] Plural[Pl_sh] Case[Pl_sh])                 # plural -чу-   
+AdjOblForms[-Agr] [<adj>:] AdjOblique[u] Plural[Pl_sh] Case[Pl_sh,all_der] (AllDer | (AllDer1 AllDer2))?                      # plural -чу- Allative derivatives
+AdjOblForms[-Agr] [<adj>:] ((AdjOblique[pl_a]  (Case[Adj_u,-Adj_loc] | Case[Adj_un])) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
+AdjOblForms[-Agr] [<adj>:] AdjOblique[pl_a] Epent Case[Adj_loc]
 
 #attributive use
 AdjOblForms[-OblSame,-Agr] [<adj>:] AdjOblique[u]
@@ -22,13 +20,13 @@ AdjAttrAbs[-Agr] [<adj>:]
 
 NounClass AdjOblForms[Agr] [<adj>:] #absolutive
 
-NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]))   # singular oblique cases
+NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[u] Case[Adj_u]) | (AdjOblique[un] Case[Adj_un]) | (AdjOblique[upn] Case[Adj_upn]) | (AdjOblique[ch] Case[Adj_ch]))   # singular oblique cases
 NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[upn] Case[Pro_all] (AllDer | (AllDer1 AllDer2)) # derivated allative cases
 
-NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[Pl_j] Plural[Pl_j] Case[Pl_j]                                                                                                             # plural -чу- 
-NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[u] ((Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] (Case[Pl_shk] | (Case[Pl_shk,all_der] (AllDer | (AllDer1 AllDer2))))))        # plural -чу-
-NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[pl_a] (Case[Adj_u] | Case[Adj_un])) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
-
+NounClass AdjOblForms[Agr] [<adj>:] (AdjOblique[ch] Plural[Pl_j] Case[Pl_j] | AdjOblique[u] Plural[Pl_sh] Case[Pl_sh])                                                         # plural -чу- 
+NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[u] Plural[Pl_sh] Case[Pl_sh,all_der] (AllDer | (AllDer1 AllDer2))?                                                              # plural -чу-
+NounClass AdjOblForms[Agr] [<adj>:] ((AdjOblique[pl_a] (Case[Adj_u,-Adj_loc] | Case[Adj_un])) | (AdjOblique[pl_ap] (Case[Adj_upn] | (Case[Pro_all] (AllDer | (AllDer1 AllDer2))))))     # plural -чар-, -чер-, -чаьр-
+NounClass AdjOblForms[Agr] [<adj>:] AdjOblique[pl_a] Epent Case[Adj_loc]
 
 #attributive use
 NounClass AdjOblForms[-OblSame,Agr] [<adj>:] AdjOblique[u]
@@ -44,7 +42,7 @@ LEXICON AdjOblique
 <obl>:чу[u]
 <obl>:чун[un]
 <obl>:чуьн[upn]
-<obl>:чи[Pl_j]
+<obl>:ч[ch]
 <obl><pl>:чер[pl_e]
 <obl><pl>:чар[pl_a]
 <obl><pl>:чьар[pl_ap]

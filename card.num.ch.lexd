@@ -1,30 +1,30 @@
-# видимо, числительные пренадлежат к 4 склонению
-
 PATTERNS
-(NumAttAbs[-Agr] | NumAttObl[-Agr]) [<num>:]               #no inflection
+(NumAttAbs[-Agr] | NumAttObl[-Agr]) [<num>:]          #no inflection
 NounClass (NumAttAbs[Agr] | NumAttObl[Agr]) [<num>:]  #agreement + no inflection
 
 NumNomAbs[-Agr] [<num>:]                                                                                                    # absolutive
-NumNomAbs[-Agr] [<num>:] ObliqueErg Case[Num_erg]                                                                            # ergative
-NumNomObl[-Agr] [<num>:] Oblique Case[Num]                                                                                   # various cases, not ergative
-NumNomObl[-Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
-NumNomObl[-Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
-NumNomObl[-Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
+NumNomAbs[-Agr] [<num>:] Oblique[mm] Case[Num_erg]                                                                            # ergative
+NumNomObl[-Agr] [<num>:] Oblique[nn] Case[Num]
+NumNomObl[-Agr] [<num>:] Oblique[n] Case[Num_n]
+                                                                                   # various cases, not ergative
+NumNomObl[-Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]))   # plural  
+NumNomObl[-Agr] [<num>:] Oblique Case[all_ga] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
+NumNomObl[-Agr] [<num>:] Oblique Plural[Pl_sh] Case[all_der,Pl_sh] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
 
 # whith class agreement (4, 14)
 NounClass NumNomAbs[Agr] [<num>:]                                                                                                    # absolutive
-NounClass NumNomAbs[Agr] [<num>:] ObliqueErg Case[Num_erg]                                                                            # ergative
-NounClass NumNomObl[Agr] [<num>:] Oblique Case[Num,-Erg]                                                                              # various cases, not ergative
-NounClass NumNomObl[Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]) | (Plural[Pl_shk] Case[Pl_shk]))   # plural  
-NounClass NumNomObl[Agr] [<num>:] Oblique Case[all_der,-Pl_shk] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
-NounClass NumNomObl[Agr] [<num>:] Oblique Plural Case[all_der,Pl_shk] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
+NounClass NumNomAbs[Agr] [<num>:] Oblique[mm] Case[Num_erg]                                                                          # ergative
+NounClass NumNomObl[Agr] [<num>:] Oblique[nn] Case[Num]
+NounClass NumNomObl[Agr] [<num>:] Oblique[n] Case[Num_n]                                                                              # various cases, not ergative
+NounClass NumNomObl[Agr] [<num>:] Oblique ((Plural[Pl_j] Case[Pl_j]) | (Plural[Pl_sh] Case[Pl_sh]))                # plural  
+NounClass NumNomObl[Agr] [<num>:] Oblique Case[all_ga] (AllDer | (AllDer1 AllDer2))?                               # singular allative derivations
+NounClass NumNomObl[Agr] [<num>:] Oblique Plural[Pl_sh] Case[all_der,Pl_sh] (AllDer | (AllDer1 AllDer2))?                         # plural allative derivations
 
 
-# СПРАВКА
-# Несамостоятельные (att) вообще не склоняются, просто стоят в oblique
-# Самостоятельные (nom) склоняются все по Aliroev_I_Yu__Margoshvili_L_Yu_-_Kistiny стр. 97 (но я слабо себе это представляю)
-# Или только первые пять (Yakovlev стр. 61)
-
+LEXICON Oblique
+<obl>:нн[nn]
+<obl>:н[n]
+<obl>:мм[mm]
 
 LEXICON NumAttAbs
 цaI:цхьа #1
@@ -113,9 +113,4 @@ LEXICON NumNomObl # Я не уверена, что это валидно
 ткъа:ткъа #20
 иъ:еа[Agr] #4
 ейтта:ейтта[Agr] #14
-
-LEXICON Oblique
-<obl>:нн
-LEXICON ObliqueErg
-<obl>:мм
 
